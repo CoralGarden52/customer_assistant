@@ -1,0 +1,45 @@
+# ==== Secrets / API keys ====
+.env
+.env.*
+!.env.example
+!.env.sample
+apikey.txt
+*apikey*
+*api_key*
+*secret*
+*token*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+
+# ==== Python ====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+
+# ==== Node / frontend ====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==== OS / IDE ====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
