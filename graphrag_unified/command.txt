@@ -1,0 +1,31 @@
+运行顺序：
+
+第1步：多模态预处理
+作用：读取 /home/wyz/kefu/data/手册 下的原始手册，保留文本里的 <PIC> 标记，生成 GraphRAG 需要的 input/*.txt，并产出 chunk_metadata.json。
+命令：
+cd /home/wyz/kefu/graphrag_unified && /home/wyz/miniconda3/envs/wyz/bin/python preprocess_multimodal.py
+
+第2步：建立 GraphRAG 索引（约 30-40 分钟）
+作用：基于 input 目录建立 GraphRAG 检索索引，产出 output/ 下的 documents、text_units、entities、relationships 等文件。
+命令：
+cd /home/wyz/kefu/graphrag_unified && nohup /home/wyz/miniconda3/envs/wyz/bin/graphrag index --root . --verbose > index.log 2>&1 &
+
+第3步：生成 text_unit 图片映射
+作用：读取 output/documents.parquet 和 output/text_units.parquet，生成 text_unit_image_map.json，让 GraphRAG 和 BM25 都能按 text_unit_id / short_id 稳定查图。
+命令：
+cd /home/wyz/kefu/graphrag_unified && /home/wyz/miniconda3/envs/wyz/bin/python build_text_unit_image_map.py
+
+第4步：生成提交文件
+作用：读取 question_public.csv，结合 BM25 + GraphRAG 检索结果生成 submission.csv，并在回答里按需插入 <PIC>。
+命令：
+cd /home/wyz/kefu/graphrag_unified && /home/wyz/miniconda3/envs/wyz/bin/python -u submit.py
+
+第5步：按 id 排序（可选）
+作用：如果 submission.csv 是断点续跑生成的，最后可再按 id 升序整理一次。
+命令：
+cd /home/wyz/kefu/graphrag_unified && /home/wyz/miniconda3/envs/wyz/bin/python sort_submission.py
+
+说明：
+1. 正常执行顺序就是 1 -> 2 -> 3 -> 4，最后第 5 步按需执行。
+2. 如果只改了回答逻辑或 prompt，通常只需要重新跑第 4 步。
+3. 如果重新建立了索引，或者改了手册内容 / chunk 方式，需要重新跑第 1-4 步。

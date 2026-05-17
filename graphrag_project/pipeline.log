@@ -1,0 +1,55 @@
+/home/wyz/miniconda3/envs/wyz/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+============================================================
+Hybrid Retrieval Submission Generator (BM25 + GraphRAG)
+Concurrency: 5
+============================================================
+[1/5] Loading config...
+[2/5] Loading indexed data...
+  entities: 2851 rows
+  communities: 630 rows
+  community_reports: 625 rows
+  text_units: 344 rows
+  relationships: 3724 rows
+[3/5] Building BM25 index...
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.574 seconds.
+Prefix dict has been built successfully.
+  Indexed 344 text chunks
+[4/5] Loading questions from /home/wyz/kefu/data/question_public.csv...
+  400 questions
+  Remaining: 400
+[5/5] Processing -> /home/wyz/kefu/data/submission.csv (concurrency=5)
+------------------------------------------------------------
+  [1/400] id=3 (24.1s)
+  [10/400] id=10 (33.2s)
+  [20/400] id=21 (21.6s)
+  [30/400] id=35 (33.9s)
+  [40/400] id=49 (26.4s)
+  [50/400] id=58 (28.1s)
+  [60/400] id=73 (22.4s)
+  [70/400] id=85 (20.5s)
+  [80/400] id=94 (27.3s)
+  [90/400] id=104 (22.3s)
+  [100/400] id=114 (21.1s)
+  [110/400] id=124 (25.4s)
+  [120/400] id=134 (24.0s)
+  [130/400] id=142 (31.5s)
+  [140/400] id=162 (28.6s)
+  [150/400] id=172 (28.3s)
+  [160/400] id=182 (23.2s)
+  [170/400] id=192 (22.2s)
+  [180/400] id=202 (22.8s)
+  [190/400] id=213 (19.4s)
+  [200/400] id=219 (29.6s)
+  [210/400] id=233 (13.8s)
+  [220/400] id=246 (30.8s)
+  [230/400] id=258 (20.3s)
+  [240/400] id=268 (22.1s)
+  [250/400] id=278 (26.3s)
+  [260/400] id=288 (24.6s)
+  [270/400] id=295 (34.5s)
+  [280/400] id=307 (18.7s)
+  [290/400] id=317 (15.0s)
+  [300/400] id=325 (38.6s)

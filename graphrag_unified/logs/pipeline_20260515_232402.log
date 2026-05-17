@@ -1,0 +1,137 @@
+Cleaning cache and output directories...
+Done.
+==========================================
+GraphRAG Multimodal Pipeline
+Started: Fri May 15 11:24:02 PM CST 2026
+Log file: /home/wyz/kefu/graphrag_unified/logs/pipeline_20260515_232402.log
+==========================================
+
+[1/4] Preprocessing manuals...
+Processed: VR头显手册.txt
+  Text length: 5030 chars
+  <PIC> markers: 10
+  Images: 10
+  Chunks: 12 (with pics: 4)
+Processed: 人体工学椅手册.txt
+  Text length: 555 chars
+  <PIC> markers: 16
+  Images: 16
+  Chunks: 2 (with pics: 2)
+Processed: 健身单车手册.txt
+  Text length: 10821 chars
+  <PIC> markers: 43
+  Images: 43
+  Chunks: 25 (with pics: 16)
+Processed: 健身追踪器手册.txt
+  Text length: 12980 chars
+  <PIC> markers: 57
+  Images: 57
+  Chunks: 29 (with pics: 26)
+Processed: 儿童电动摩托车手册.txt
+  Text length: 5118 chars
+  <PIC> markers: 23
+  Images: 23
+  Chunks: 12 (with pics: 8)
+Processed: 冰箱手册.txt
+  Text length: 7539 chars
+  <PIC> markers: 58
+  Images: 58
+  Chunks: 17 (with pics: 14)
+Processed: 功能键盘手册.txt
+  Text length: 4212 chars
+  <PIC> markers: 19
+  Images: 19
+  Chunks: 10 (with pics: 4)
+Processed: 发电机手册.txt
+  Text length: 9166 chars
+  <PIC> markers: 102
+  Images: 101
+  Chunks: 21 (with pics: 17)
+Processed: 可编程温控器手册.txt
+  Text length: 5097 chars
+  <PIC> markers: 57
+  Images: 58
+  Chunks: 12 (with pics: 12)
+Processed: 吹风机手册.txt
+  Text length: 7415 chars
+  <PIC> markers: 54
+  Images: 54
+  Chunks: 17 (with pics: 16)
+Processed: 摩托艇手册.txt
+  Text length: 6971 chars
+  <PIC> markers: 35
+  Images: 35
+  Chunks: 16 (with pics: 12)
+Processed: 水泵手册.txt
+  Text length: 5359 chars
+  <PIC> markers: 78
+  Images: 78
+  Chunks: 12 (with pics: 11)
+Processed: 汇总英文手册.txt
+  Text length: 1127627 chars
+  <PIC> markers: 1783
+  Images: 0
+  Chunks: 2506 (with pics: 1030)
+Processed: 洗碗机手册.txt
+  Text length: 14595 chars
+  <PIC> markers: 29
+  Images: 0
+  Chunks: 33 (with pics: 14)
+Processed: 烤箱手册.txt
+  Text length: 6210 chars
+  <PIC> markers: 30
+  Images: 30
+  Chunks: 14 (with pics: 9)
+Processed: 电钻手册.txt
+  Text length: 10892 chars
+  <PIC> markers: 26
+  Images: 26
+  Chunks: 25 (with pics: 11)
+Processed: 相机手册.txt
+  Text length: 15837 chars
+  <PIC> markers: 87
+  Images: 87
+  Chunks: 36 (with pics: 27)
+Processed: 空气净化器手册.txt
+  Text length: 2966 chars
+  <PIC> markers: 27
+  Images: 27
+  Chunks: 7 (with pics: 6)
+Processed: 空调手册.txt
+  Text length: 7384 chars
+  <PIC> markers: 36
+  Images: 36
+  Chunks: 17 (with pics: 11)
+Processed: 蒸汽清洁机手册.txt
+  Text length: 3357 chars
+  <PIC> markers: 17
+  Images: 17
+  Chunks: 8 (with pics: 5)
+Processed: 蓝牙激光鼠标手册.txt
+  Text length: 3252 chars
+  <PIC> markers: 19
+  Images: 19
+  Chunks: 8 (with pics: 6)
+
+Chunk metadata saved to: /home/wyz/kefu/graphrag_unified/chunk_metadata.json
+Total manuals: 21
+
+[2/4] Building GraphRAG index...
+/home/wyz/miniconda3/envs/wyz/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_worker.py:75: RuntimeWarning: coroutine 'Logging.async_success_handler' was never awaited
+  self._queue = None
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Starting pipeline with workflows: load_input_documents, create_base_text_units, create_final_documents, extract_graph, finalize_graph, extract_covariates, create_communities, create_final_text_units, create_community_reports, generate_text_embeddings
+Starting workflow: load_input_documents
+
+Workflow complete: load_input_documents
+Starting workflow: create_base_text_units
+  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................  1 / 1 ............................................................................................/home/wyz/miniconda3/envs/wyz/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_worker.py:75: RuntimeWarning: coroutine 'Logging.async_success_handler' was never awaited
+  self._queue = None
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+Workflow complete: create_base_text_units
+Starting workflow: create_final_documents
+
+Workflow complete: create_final_documents
+Starting workflow: extract_graph
+  1 / 980   2 / 980   3 / 980   4 / 980   5 / 980   6 / 980   7 / 980   8 / 980   9 / 980   10 / 980   11 / 980   12 / 980   13 / 980   14 / 980   15 / 980   16 / 980   17 / 980   18 / 980   19 / 980   20 / 980   21 / 980   22 / 980   23 / 980   24 / 980   25 / 980   26 / 980   27 / 980   28 / 980   29 / 980   30 / 980   31 / 980   32 / 980   33 / 980   34 / 980   35 / 980   36 / 980   37 / 980   38 / 980   39 / 980   40 / 980   41 / 980   42 / 980   43 / 980   44 / 980   45 / 980   46 / 980   47 / 980   48 / 980   49 / 980   50 / 980   51 / 980   52 / 980   53 / 980   54 / 980   55 / 980   56 / 980   57 / 980   58 / 980   59 / 980   60 / 980   61 / 980   62 / 980   63 / 980   64 / 980   65 / 980   66 / 980   67 / 980   68 / 980   69 / 980   70 / 980   71 / 980   72 / 980   73 / 980   74 / 980   75 / 980   76 / 980   77 / 980   78 / 980   79 / 980   80 / 980   81 / 980   82 / 980   83 / 980   84 / 980   85 / 980   86 / 980   87 / 980   88 / 980   89 / 980   90 / 980   91 / 980   92 / 980   93 / 980   94 / 980   95 / 980   96 / 980   97 / 980   98 / 980   99 / 980   100 / 980   101 / 980   102 / 980 

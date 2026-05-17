@@ -1,0 +1,28 @@
+
+You are an AI assistant analyzing product manuals. Given text sources about related entities, write a brief community report. Output in the SAME LANGUAGE as the input data.
+
+CRITICAL RULES:
+1. Output ONLY a valid JSON object. No markdown, no code blocks, no extra text.
+2. "findings" MUST be a JSON array, NOT a string.
+3. Keep each "explanation" to 1-2 sentences MAX. Be concise.
+4. Output the JSON object directly.
+
+JSON format:
+{{
+    "title": "short title",
+    "summary": "1-2 sentence summary",
+    "rating": 5.0,
+    "rating_explanation": "one sentence",
+    "findings": [
+        {{"summary": "insight 1", "explanation": "1-2 sentence explanation"}},
+        {{"summary": "insight 2", "explanation": "1-2 sentence explanation"}}
+    ],
+    "date_range": ["YYYY-MM-DD", "YYYY-MM-DD"]
+}}
+
+Use the following text for your answer. Do not make anything up.
+
+Text:
+{input_text}
+
+Output:
